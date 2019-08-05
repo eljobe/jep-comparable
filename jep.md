@@ -100,7 +100,7 @@ Several different proposals for the names of these methods have been considered:
 #### isGreaterThanOrEqualTo and isLessThanOrEqualTo
 
 Instead of `isAtLeast` and `isAtMost`, `isGreaterThanOrEqualTo` and
-`isLessThanOrEqualTo` are *strongly* perferred by many engineers
+`isLessThanOrEqualTo` are **strongly** perferred by many engineers
 because those method names match how they read the corresponding
 operators `>=` and `<=`.
 
@@ -110,7 +110,7 @@ The main arguments against these methods are:
 * They are not consistent with the popular
   [Truth](https://github.com/google/truth) library.
   
-Given that these methods are so *strongly* preferred by a very large
+Given that these methods are so **strongly** preferred by a very large
 minority of engineers, we may want to consider adding them _in
 addition_ to the `isAtLeast` and `isAtMost` methods.
 
@@ -118,7 +118,7 @@ addition_ to the `isAtLeast` and `isAtMost` methods.
 
 As an alternative to `isEquivalentTo`,
 `isEquivalentAccordingToCompareTo` is verbose, but leaves no doubt in
-the readers mind as to whether or not the implementation of equals()
+the readers mind as to whether or not the implementation of `equals()`
 on the class is consulted directly in the implementation.
 
 The decision was to make it clear in the javadoc that `isEquivalentTo`
@@ -147,10 +147,10 @@ This is easiest to explain with an example implementation.
 ```java
 public final class Comparables {
    /**
-   * Returns a {@link WrappedComparable} which can be used for comparisons.
-   *
-   * @param value the comparable to use for comparisons
-   */
+    * Returns a {@link WrappedComparable} which can be used for comparisons.
+    *
+    * @param value the comparable to use for comparisons
+    */
   public static <T extends Comparable<? super T>> WrappedComparable<T> is(T value) {
     return new WrappedComparable<T>(value);
   }
@@ -233,7 +233,7 @@ we gave the subclass.)
 ### Operator overloading
 
 If the JDK were enhanced to allow operator overloading, this proposal
-*should* become obsolete. For example:
+**should** become obsolete. For example:
 
 ```java
 if (earthquakeA > recordEarthquake) {
