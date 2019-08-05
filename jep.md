@@ -93,6 +93,11 @@ public interface Comparable<T> {
 Alternatives
 ------------
 
+The following two categories of alternatives were considered:
+
+* [Different Names](#different-names)
+* [Static Wrapper](#static-wrapper)
+
 ### Different Names
 
 Several different proposals for the names of these methods have been considered:
@@ -140,7 +145,7 @@ And instead of the other methods, methods of the form:
 * `greaterThan` - A little less fluent.
 * `gt` - Too brief.
 
-### Access methods through a wrapper around Comparable
+### Static Wrapper
 
 This is easiest to explain with an example implementation.
 
